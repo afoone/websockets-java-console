@@ -1,0 +1,17 @@
+{
+  "name": "websocket-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "mvn exec:java -Dexec.mainClass=\"com.afoone.websocketserver.SimpleServer\"",
+    "client": "npm start --prefix ./websocketclient ",
+    "start" : "mvn compile && concurrently 'npm run server' 'npm run client'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^6.2.0"
+  }
+}
